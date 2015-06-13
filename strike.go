@@ -29,8 +29,8 @@ func getResponse(url string) (resp *http.Response, err error) {
     return client.Do(req)
 }
 
-func callApi(url string) (result interface{}, err error) {
-    var data interface{}
+func callApi(url string) (result map[string]interface{}, err error) {
+    var data map[string]interface{}
 	response, err := getResponse(url)
     if (err != nil) {
     	return data, err
