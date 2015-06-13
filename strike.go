@@ -15,7 +15,7 @@ var api = map[string]map[string]string{
       "Download":"https://getstrike.net/api/v2/torrents/download/",
       "Count":"https://getstrike.net/api/v2/torrents/count/",
       "Description":"https://getstrike.net/api/v2/torrents/descriptions/?hash=%v",
-      "Top":"https://getstrike.net/api/v2/torrents/top/",
+      "Top":"https://getstrike.net/api/v2/torrents/top/?category=%v&subcategory=%v",
       "Imdb":"https://getstrike.net/api/v2/media/imdb/",
     },
   }
