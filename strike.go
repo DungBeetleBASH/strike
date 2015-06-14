@@ -10,12 +10,12 @@ var version = "v2"
 
 var api = map[string]map[string]string{
     "v2": map[string]string{
-      "Search":"https://getstrike.net/api/v2/torrents/search/?phrase=%v&category=%v&subcategory=%v",
-      "Info":"https://getstrike.net/api/v2/torrents/info/?hashes=%v",
-      "Download":"https://getstrike.net/api/v2/torrents/download/",
+      "Search":"https://getstrike.net/api/v2/torrents/search/?phrase=%s&category=%s&subcategory=%s",
+      "Info":"https://getstrike.net/api/v2/torrents/info/?hashes=%s",
+      "Download":"https://getstrike.net/api/v2/torrents/download/?hash=%s",
       "Count":"https://getstrike.net/api/v2/torrents/count/",
-      "Description":"https://getstrike.net/api/v2/torrents/descriptions/?hash=%v",
-      "Top":"https://getstrike.net/api/v2/torrents/top/?category=%v&subcategory=%v",
+      "Description":"https://getstrike.net/api/v2/torrents/descriptions/?hash=%s",
+      "Top":"https://getstrike.net/api/v2/torrents/top/?category=%s&subcategory=%s",
       "Imdb":"https://getstrike.net/api/v2/media/imdb/",
     },
   }
