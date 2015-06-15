@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func Top(params ...string) (result interface{}, err error) {
+func Top(params ...string) (result map[string]interface{}, err error) {
 	last := len(params) - 1
 	args := make([]interface{}, 2)
   	for i, _ := range args {

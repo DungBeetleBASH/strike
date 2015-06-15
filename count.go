@@ -1,5 +1,5 @@
 package strike
 
-func Count() (result interface{}, err error) {
+func Count() (result map[string]interface{}, err error) {
 	return callApi(api[version]["Count"])
 }
