@@ -15,15 +15,12 @@
     Accepts 1-3 parameters of type string
     
     params[0] string - the search query 
-    
     params[1] string - optional - category
-    
     params[2] string - optional - subcategory
 
 **func Description(params ...interface{}) (result map[string]interface{}, err error)**
 
     params[0] string - info hash
-
     params[1] bool - optional - if true the results will be returned base64 decoded
 
 **func Info(params ...interface{}) (result map[string]interface{}, err error)**
@@ -45,7 +42,6 @@
     Accepts 1-2 parameters of type string 
     
     params[0] string - category
-    
     params[1] string - optional - subcategory
 
 **func SetVersion(v string) bool**
