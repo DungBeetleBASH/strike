@@ -14,39 +14,39 @@
     
     Accepts 1-3 parameters of type string
     
-    param 1 - the search query 
+    params[0] string - the search query 
     
-    param 2 - an optional category
+    params[1] string - optional - category
     
-    param 3 - an optional subcategory
+    params[2] string - optional - subcategory
 
 **func Description(params ...interface{}) (result map[string]interface{}, err error)**
 
-    param 1 - string - an info hash
+    params[0] string - info hash
 
-    param 2 - an optional bool - if true the results will be returned base64 decoded
+    params[1] bool - optional - if true the results will be returned base64 decoded
 
 **func Info(params ...interface{}) (result map[string]interface{}, err error)**
     
     Accepts either one []string parameter or any number of string parameters
     
-    param 1 - string - an info hash 
+    params[] string - info hash 
 
 **func Download(hash string) (result map[string]interface{}, err error)**
     
-    hash - an info hash
+    hash string - info hash 
 
 **func Count() (result map[string]interface{}, err error)**
     
-    Returns a map containing the current total torrent count on getstrike.net
+    Returns a map containing the current total torrent count on https://getstrike.net/
 
 **func Top(params ...string) (result map[string]interface{}, err error)**
     
     Accepts 1-2 parameters of type string 
     
-    param 1 - the category 
+    params[0] string - category
     
-    param 2 - an optional subcategory
+    params[1] string - optional - subcategory
 
 **func SetVersion(v string) bool**
     
