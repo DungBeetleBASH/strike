@@ -1,3 +1,14 @@
+/*
+  #strike
+
+  strike is a Go wrapper for the getstrike.net torrent search API: https://getstrike.net/api/
+  All of the API's methods are covered and all calls return map[string]interface{}, error
+
+  Variadic functions have been used for some API calls to make the interface more flexible.
+  These are documented below.
+
+  [![GoDoc](https://godoc.org/github.com/Pappa/strike?status.svg)](https://godoc.org/github.com/Pappa/strike)
+*/
 package strike
 
 import (
@@ -43,6 +54,10 @@ func callApi(url string) (result map[string]interface{}, err error) {
     return data, nil
 }
 
+/*
+  Sets the getstrike.net API version to be used.
+  Cuttently only accepts "v2"
+ */
 func SetVersion(v string) (bool) {
   _, ok := api[v]
   if (ok) {
