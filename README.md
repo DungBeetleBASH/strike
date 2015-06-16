@@ -19,6 +19,8 @@
     params[2] string - optional - subcategory
 
 **func Description(params ...interface{}) (result map[string]interface{}, err error)**
+    
+    Accepts 1-2 parameters
 
     params[0] string - info hash
     params[1] bool - optional - if true the results will be returned base64 decoded
@@ -30,6 +32,8 @@
     params[] string - info hash 
 
 **func Download(hash string) (result map[string]interface{}, err error)**
+    
+    Accepts 1 parameter
     
     hash string - info hash 
 
