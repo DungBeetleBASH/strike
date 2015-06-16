@@ -3,12 +3,7 @@ package strike
 import (
 	"fmt"
 )
-/*
-	Accepts 1-3 parameters of type string
-	param 1 - the search query
-	param 2 - an optional category
-	param 3 - an optional subcategory
- */
+
 func Search(params ...string) (result map[string]interface{}, err error) {
 	last := len(params) - 1
 	args := make([]interface{}, 3)

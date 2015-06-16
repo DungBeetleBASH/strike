@@ -5,9 +5,7 @@ import (
     "fmt"
     "errors"
 )
-/*
-	Accepts either one []string parameter or any number of string parameters
- */
+
 func Info(params ...interface{}) (result map[string]interface{}, err error) {
 	var args []string
 	l := len(params)

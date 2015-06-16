@@ -5,10 +5,7 @@ import (
     "encoding/base64"
     "errors"
 )
-/*
-	param 1 - string - an info hash
-	param 2 - an optional bool - if true the results will be returned base64 decoded
- */
+
 func Description(params ...interface{}) (result map[string]interface{}, err error) {
 	l := len(params)
 	if (l == 0) {

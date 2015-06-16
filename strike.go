@@ -54,10 +54,6 @@ func callApi(url string) (result map[string]interface{}, err error) {
     return data, nil
 }
 
-/*
-  Sets the getstrike.net API version to be used.
-  Cuttently only accepts "v2"
- */
 func SetVersion(v string) (bool) {
   _, ok := api[v]
   if (ok) {
