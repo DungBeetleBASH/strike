@@ -6,7 +6,7 @@
 
     Variadic functions have been used for some API calls to make the interface more flexible. These are documented below.
 
-    [![GoDoc](https://godoc.org/github.com/Pappa/strike?status.svg)](https://godoc.org/github.com/Pappa/strike)
+[![GoDoc](https://godoc.org/github.com/Pappa/strike?status.svg)](https://godoc.org/github.com/Pappa/strike)
 
 #FUNCTIONS
 
