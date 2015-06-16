@@ -50,6 +50,6 @@
 
 **func SetVersion(v string) bool**
     
-    Sets the getstrike.net API version to be used. Cuttently only accepts "v2"
+    Sets the getstrike.net API version to be used. Currently only accepts "v2"
 
 
