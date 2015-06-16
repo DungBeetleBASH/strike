@@ -22,6 +22,10 @@
 
 **func Description(params ...interface{}) (result map[string]interface{}, err error)**
 
+    param 1 - string - an info hash
+
+    param 2 - an optional bool - if true the results will be returned base64 decoded
+
 **func Info(params ...interface{}) (result map[string]interface{}, err error)**
     
     Accepts either one []string parameter or any number of string parameters
