@@ -43,6 +43,12 @@ func callApi(url string) (result map[string]interface{}, err error) {
     return data, nil
 }
 
-func SetVersion(v string) {
-	version = v
+func SetVersion(v string) (bool) {
+  _, ok := api[v]
+  if (ok) {
+    version = v
+    return true
+  } else {
+    return false
+  }
 }
