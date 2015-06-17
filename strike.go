@@ -1,13 +1,10 @@
 /*
-  #strike
+Package strike
 
-  strike is a Go wrapper for the getstrike.net torrent search API: https://getstrike.net/api/
-  All of the API's methods are covered and all calls return map[string]interface{}, error
+strike is a Go wrapper for the getstrike.net torrent search API: https://getstrike.net/api/
 
-  Variadic functions have been used for some API calls to make the interface more flexible.
-  These are documented below.
-
-  [![GoDoc](https://godoc.org/github.com/Pappa/strike?status.svg)](https://godoc.org/github.com/Pappa/strike)
+Variadic functions have been used for some API calls to make the interface more flexible.
+These are documented below.
 */
 package strike
 
