@@ -16,6 +16,6 @@ func GetTestServer(responseText string) (*httptest.Server) {
 }
 
 func TestSetVersion(t *testing.T) {
-  assert.Equal(t, SetVersion("v2"), true)
-  assert.Equal(t, SetVersion("v3"), false)
+  assert.Equal(t, SetVersion("v2"), true, "v2 should be valid")
+  assert.Equal(t, SetVersion("v3"), false, "v3 should not be valid")
 }

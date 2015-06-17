@@ -14,12 +14,12 @@ func TestCount(t *testing.T) {
     	statusCode, ok := testMap["statuscode"]
     	if assert.Equal(t, true, ok) {
     		var OK_RESPONSE float64 = 200
-    		assert.Equal(t, OK_RESPONSE, statusCode)
+    		assert.Equal(t, OK_RESPONSE, statusCode, "Status code OK")
     	}
     	message, ok := testMap["message"]
     	if assert.Equal(t, true, ok) {
     		var COUNT float64 = 8000000
-    		assert.Equal(t, COUNT, message)
+    		assert.Equal(t, COUNT, message, "Count message OK")
     	}
     }
 }
