@@ -1,7 +1,6 @@
 #strike
 
     strike is a Go wrapper for the getstrike.net torrent search API: (https://getstrike.net/api/)
-    All of the API's methods are covered and all calls return map[string]interface{}, error
 
     Variadic functions have been used for some API calls to make the interface more flexible.
     These are documented below.
@@ -37,9 +36,9 @@
 
     hash string - info hash
 
-**func Count() (result map[string]interface{}, err error)**
+**func Count() (count int64, err error)**
 
-    Returns a map containing the current total torrent count on https://getstrike.net/
+    Returns the current total torrent count on https://getstrike.net/
 
 **func Top(params ...string) (result map[string]interface{}, err error)**
 
