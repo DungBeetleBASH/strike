@@ -39,19 +39,26 @@ func getResponse(url string) (resp *http.Response, err error) {
     return client.Do(req)
 }
 
-func callApi(url string) (result map[string]interface{}, err error) {
+func getJSON(body []byte) (result map[string]interface{}, err error) {
     var data map[string]interface{}
+    err = json.Unmarshal(body, &data)
+    if (err != nil) {
+      return data, err
+    }
+    return data, nil
+}
+
+func callApi(url string) (result map[string]interface{}, err error) {
 	response, err := getResponse(url)
     if (err != nil) {
-    	return data, err
+    	return make(map[string]interface{}, 0), err
     }
     defer response.Body.Close()
     body, err := ioutil.ReadAll(response.Body)
-    err = json.Unmarshal(body, &data)
     if (err != nil) {
-    	return data, err
+      return make(map[string]interface{}, 0), err
     }
-    return data, nil
+    return getJSON(body)
 }
 
 func SetVersion(v string) (bool) {
