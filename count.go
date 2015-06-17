@@ -2,7 +2,6 @@ package strike
 
 /*
 Count returns the number torrents indexed by https://strikesearch.net
-The returned map has 2 properties: statuscode and message
 */
 func Count() (count int64, err error) {
 	result, err := callApi(api[version]["Count"])
