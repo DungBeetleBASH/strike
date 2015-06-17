@@ -1,13 +1,14 @@
 package strike
 
 import (
-	"testing"
-	//"github.com/stretchr/testify/assert"
+  "testing"
+  "github.com/stretchr/testify/assert"
 )
 
 func TestCount(t *testing.T) {
-    /*ts := GetTestServer(`{"statuscode":200,"message":7352023}`)
+    ts := GetTestServer(`{"statuscode":200,"message":8000000}`)
     defer ts.Close()
+    api[version]["Count"] = ts.URL
     testMap, err := Count()
     if assert.Nil(t, err) {
     	statusCode, ok := testMap["statuscode"]
@@ -17,8 +18,8 @@ func TestCount(t *testing.T) {
     	}
     	message, ok := testMap["message"]
     	if assert.Equal(t, true, ok) {
-    		var COUNT float64 = 7352023
+    		var COUNT float64 = 8000000
     		assert.Equal(t, COUNT, message)
     	}
-    }*/
+    }
 }
