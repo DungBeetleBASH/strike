@@ -36,6 +36,12 @@
 
     hash string - info hash
 
+**func Imdb(imdbId string) (result map[string]interface{}, err error)**
+
+    Accepts 1 parameter
+
+    imdbId string - an IMDB id, contained within the torrent info returned by Info
+
 **func Count() (count int64, err error)**
 
     Returns the current total torrent count on https://getstrike.net/

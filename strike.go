@@ -24,6 +24,7 @@ var api = map[string]map[string]string{
       "Count":"https://getstrike.net/api/v2/torrents/count/",
       "Description":"https://getstrike.net/api/v2/torrents/descriptions/?hash=%s",
       "Top":"https://getstrike.net/api/v2/torrents/top/?category=%s&subcategory=%s",
+      "Imdb":"https://getstrike.net/api/v2/media/imdb/?imdbid=%s",
     },
   }
 
