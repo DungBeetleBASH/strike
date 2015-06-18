@@ -10,6 +10,7 @@ import (
     "io/ioutil"
     "net/http"
     "encoding/json"
+    "fmt"
 )
 
 var version = "v2"
@@ -38,6 +39,9 @@ func getResponse(url string) (resp *http.Response, err error) {
 func getJSON(body []byte) (result map[string]interface{}, err error) {
     var data map[string]interface{}
     err = json.Unmarshal(body, &data)
+    t := SearchResults{}
+    json.Unmarshal(body, &t)
+    fmt.Println(t.Torrents[0])
     if (err != nil) {
       return data, err
     }
