@@ -44,7 +44,7 @@ func getJSON(body []byte) (result map[string]interface{}, err error) {
     return data, nil
 }
 
-func callApi(url string) (result map[string]interface{}, err error) {
+func callAPI(url string) (result map[string]interface{}, err error) {
 	response, err := getResponse(url)
     if (err != nil) {
     	return make(map[string]interface{}, 0), err
@@ -65,7 +65,6 @@ func SetVersion(v string) (bool) {
   if (ok) {
     version = v
     return true
-  } else {
-    return false
   }
+  return false
 }

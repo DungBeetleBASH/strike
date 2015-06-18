@@ -28,7 +28,7 @@ func Description(params ...interface{}) (result map[string]interface{}, err erro
 		}
 	}
 	query := fmt.Sprintf(api[version]["Description"], hash)
-	result, err = callApi(query)
+	result, err = callAPI(query)
 	if (err != nil) {
 		return result, err
 	}

@@ -22,8 +22,8 @@ func TestTopOneCategory(t *testing.T) {
     if assert.Nil(t, err) {
     	statusCode, ok := testMap["results"]
     	if assert.Equal(t, true, ok) {
-    		var OK_RESPONSE float64 = 2
-    		assert.Equal(t, OK_RESPONSE, statusCode, "Status code OK")
+    		var results float64 = 2
+    		assert.Equal(t, results, statusCode, "Status code OK")
     	}
     	torrents, ok := testMap["torrents"]
     	if assert.Equal(t, true, ok) {
@@ -41,8 +41,8 @@ func TestTopTwoCategories(t *testing.T) {
     if assert.Nil(t, err) {
     	statusCode, ok := testMap["results"]
     	if assert.Equal(t, true, ok) {
-    		var OK_RESPONSE float64 = 2
-    		assert.Equal(t, OK_RESPONSE, statusCode, "Status code OK")
+    		var results float64 = 2
+    		assert.Equal(t, results, statusCode, "Status code OK")
     	}
     	torrents, ok := testMap["torrents"]
     	if assert.Equal(t, true, ok) {

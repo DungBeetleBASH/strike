@@ -21,5 +21,5 @@ func Search(params ...string) (result map[string]interface{}, err error) {
 		}
   	}
   	query := fmt.Sprintf(api[version]["Search"], args...)
-	return callApi(query)
+	return callAPI(query)
 }

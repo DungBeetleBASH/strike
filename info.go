@@ -42,5 +42,5 @@ func Info(params ...interface{}) (result map[string]interface{}, err error) {
 		return make(map[string]interface{}, 0), errors.New("unexpected error")
 	}
 	query := fmt.Sprintf(api[version]["Info"], strings.Join(args, ","))
-	return callApi(query)
+	return callAPI(query)
 }
