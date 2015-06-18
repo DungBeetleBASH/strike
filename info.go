@@ -6,6 +6,9 @@ import (
     "errors"
 )
 
+/*
+Info returns a map containing torrent information
+*/
 func Info(params ...interface{}) (result map[string]interface{}, err error) {
 	var args []string
 	l := len(params)

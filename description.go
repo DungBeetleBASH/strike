@@ -6,6 +6,11 @@ import (
     "errors"
 )
 
+/*
+Description returns a map containing a base64 encoded HTML description, 
+or a map containing a plain text description if true is passed as the 
+second parameter. 
+*/
 func Description(params ...interface{}) (result map[string]interface{}, err error) {
 	l := len(params)
 	if (l == 0) {

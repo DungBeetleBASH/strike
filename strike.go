@@ -1,7 +1,5 @@
 /*
-Package strike
-
-strike is a Go wrapper for the getstrike.net torrent search API: https://getstrike.net/api/
+Package strike is a Go wrapper for the getstrike.net torrent search API: https://getstrike.net/api/
 
 Variadic functions have been used for some API calls to make the interface more flexible.
 These are documented below.
@@ -59,6 +57,9 @@ func callApi(url string) (result map[string]interface{}, err error) {
     return getJSON(body)
 }
 
+/*
+SetVersion is for future use. It currently accepts only "v2", which is the default value.
+*/
 func SetVersion(v string) (bool) {
   _, ok := api[v]
   if (ok) {
