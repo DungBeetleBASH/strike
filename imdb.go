@@ -5,7 +5,7 @@ import (
 )
 
 /*
-Imdb returns a map containing a IMDB movie information.
+Imdb returns IMDB movie information.
 */
 func Imdb(imdbID string) (result IMDb, err error) {
 	query := fmt.Sprintf(api[version]["Imdb"], imdbID)
