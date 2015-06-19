@@ -10,7 +10,7 @@ query string
 category string - optional
 subcategory string - optional
 */
-func Search(params ...string) (result map[string]interface{}, err error) {
+func Search(params ...string) (results Results, err error) {
 	last := len(params) - 1
 	args := make([]interface{}, 3)
   	for i := range args {
@@ -21,5 +21,6 @@ func Search(params ...string) (result map[string]interface{}, err error) {
 		}
   	}
   	query := fmt.Sprintf(api[version]["Search"], args...)
-	return callAPI(query)
+	err = callAPI(query, &results)
+    return results, err
 }

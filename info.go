@@ -9,12 +9,12 @@ import (
 /*
 Info returns a map containing torrent information
 */
-func Info(params ...interface{}) (result map[string]interface{}, err error) {
+func Info(params ...interface{}) (result Results, err error) {
 	var args []string
 	l := len(params)
 	switch l {
 	case 0:
-		return make(map[string]interface{}, 0), errors.New("expecting at least one parameter")
+		return result, errors.New("expecting at least one parameter")
 	case 1:
 		switch params[0].(type) {
 		case string:
@@ -25,7 +25,7 @@ func Info(params ...interface{}) (result map[string]interface{}, err error) {
 				args[i] = v
 		  	}
 		default:
-		  	return make(map[string]interface{}, 0), errors.New("expecting a single parameter to be of type string or []string")
+		  	return result, errors.New("expecting a single parameter to be of type string or []string")
 		}
 	default:
 		args = make([]string, l)
@@ -33,14 +33,15 @@ func Info(params ...interface{}) (result map[string]interface{}, err error) {
 	  		if (fmt.Sprintf("%T", v) == "string") {
 	  			args[i] = v.(string)
   			} else {
-  				return make(map[string]interface{}, 0), errors.New("expecting multiple parameters to be of type string")
+  				return result, errors.New("expecting multiple parameters to be of type string")
   			}
 			
 	  	}
 	}
 	if (len(args) == 0) {
-		return make(map[string]interface{}, 0), errors.New("unexpected error")
+		return result, errors.New("unexpected error")
 	}
 	query := fmt.Sprintf(api[version]["Info"], strings.Join(args, ","))
-	return callAPI(query)
+	err = callAPI(query, &result)
+	return result, err
 }

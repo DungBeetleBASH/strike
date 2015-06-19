@@ -7,7 +7,8 @@ import (
 /*
 Download returns a map containing a .torrent file url. 
 */
-func Download(hash string) (result map[string]interface{}, err error) {
+func Download(hash string) (result TorrentDownload, err error) {
 	query := fmt.Sprintf(api[version]["Download"], hash)
-	return callAPI(query)
+	err = callAPI(query, &result)
+	return result, err
 }

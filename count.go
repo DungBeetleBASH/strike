@@ -3,11 +3,11 @@ package strike
 /*
 Count returns the number torrents indexed by https://strikesearch.net
 */
-func Count() (count int64, err error) {
-	result, err := callAPI(api[version]["Count"])
+func Count() (count uint64, err error) {
+	torrentCount := TorrentCount{}
+	err = callAPI(api[version]["Count"], &torrentCount)
 	if (err != nil) {
 		return 0, err
 	}
-	count = int64(result["message"].(float64))
-	return count, nil
+	return torrentCount.Count, nil
 }

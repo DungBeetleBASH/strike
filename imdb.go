@@ -7,7 +7,8 @@ import (
 /*
 Imdb returns a map containing a IMDB movie information.
 */
-func Imdb(imdbID string) (result map[string]interface{}, err error) {
+func Imdb(imdbID string) (result IMDb, err error) {
 	query := fmt.Sprintf(api[version]["Imdb"], imdbID)
-	return callAPI(query)
+	err = callAPI(query, &result)
+	return result, err
 }

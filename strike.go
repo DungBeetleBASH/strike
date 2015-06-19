@@ -10,7 +10,6 @@ import (
     "io/ioutil"
     "net/http"
     "encoding/json"
-    //"fmt"
 )
 
 var version = "v2"
@@ -36,29 +35,21 @@ func getResponse(url string) (resp *http.Response, err error) {
     return client.Do(req)
 }
 
-func getJSON(body []byte) (result map[string]interface{}, err error) {
-    var data map[string]interface{}
-    err = json.Unmarshal(body, &data)
-    /*t := SearchResults{}
-    json.Unmarshal(body, &t)
-    fmt.Println(t.Torrents[0])*/
-    if (err != nil) {
-      return data, err
-    }
-    return data, nil
-}
-
-func callAPI(url string) (result map[string]interface{}, err error) {
-	response, err := getResponse(url)
-    if (err != nil) {
-    	return make(map[string]interface{}, 0), err
-    }
-    defer response.Body.Close()
-    body, err := ioutil.ReadAll(response.Body)
-    if (err != nil) {
-      return make(map[string]interface{}, 0), err
-    }
-    return getJSON(body)
+func callAPI(url string, result interface{}) (err error) {
+  response, err := getResponse(url)
+  if (err != nil) {
+    return err
+  }
+  defer response.Body.Close()
+  body, err := ioutil.ReadAll(response.Body)
+  if (err != nil) {
+    return err
+  }
+  err = json.Unmarshal(body, &result)
+  if (err != nil) {
+    return err
+  }
+  return nil
 }
 
 /*
