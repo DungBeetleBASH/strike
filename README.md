@@ -9,8 +9,7 @@
 
 ##Please Note
 
-    The API is in the early stages of development and is likely to change. 
-    In particular, the map[string]interface{} return objects are soon to be changed to more usable structs.
+    The API is in the early stages of development and is likely to change.
 
 ##API
 
