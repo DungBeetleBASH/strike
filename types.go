@@ -33,21 +33,21 @@ type Torrent struct {
 /*
 getDownload returns a TorrentDownload
 */
-func (t Torrent) getDownload(string) (TorrentDownload, error) {
+func (t Torrent) GetDownload(string) (TorrentDownload, error) {
 	return Download(t.Hash)
 }
 
 /*
 getInfo returns an Results object containing torrent info
 */
-func (t Torrent) getInfo(string) (Results, error) {
+func (t Torrent) GetInfo(string) (Results, error) {
 	return Info(t.Hash)
 }
 
 /*
 getIMDb returns an IMDb movie information object.
 */
-func (t Torrent) getIMDb(string) (IMDb, error) {
+func (t Torrent) GetIMDb(string) (IMDb, error) {
 	return Imdb(t.ImdbID)
 }
 
@@ -56,7 +56,7 @@ getDescription returns a TorrentDescription containing a base64 encoded HTML des
 or a TorrentDescription containing a plain text description if true is passed as the 
 first parameter. 
 */
-func (t Torrent) getDescription(params ...bool) (result TorrentDescription, err error) {
+func (t Torrent) GetDescription(params ...bool) (result TorrentDescription, err error) {
 	decode := false
 	if (len(params) > 0) {
 		decode = params[0]
