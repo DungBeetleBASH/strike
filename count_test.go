@@ -11,7 +11,7 @@ func TestCount(t *testing.T) {
     api[version]["Count"] = ts.URL
     count, err := Count()
     if assert.Nil(t, err) {
-    	var expecting int64 = 8000000
+    	var expecting uint64 = 8000000
     	assert.Equal(t, expecting, count, "Count OK")
     }
 }

@@ -18,18 +18,10 @@ func TestTopOneCategory(t *testing.T) {
     ts := GetTestServer(`{"results":2,"torrents":[{"torrent_hash":"89599BF4DC369A3A8ECA26411C5CCF922D78B486"},{"torrent_hash":"BE4AA07856542F2DCD4E12362EF9F0A1AC88C358"}]}`)
     defer ts.Close()
     api[version]["Top"] = strings.Join([]string{ts.URL, "?category=%s&subcategory=%s"}, "")
-    testMap, err := Top("Movies")
+    result, err := Top("Movies")
     if assert.Nil(t, err) {
-    	statusCode, ok := testMap["results"]
-    	if assert.Equal(t, true, ok) {
-    		var results float64 = 2
-    		assert.Equal(t, results, statusCode, "Status code OK")
-    	}
-    	torrents, ok := testMap["torrents"]
-    	if assert.Equal(t, true, ok) {
-    		assert.Equal(t, 2, len(torrents.([]interface{})), "Torrents OK")
-    		assert.Equal(t, "89599BF4DC369A3A8ECA26411C5CCF922D78B486", torrents.([]interface{})[0].(map[string]interface{})["torrent_hash"], "Torrent hash OK")
-    	}
+        assert.Equal(t, 2, len(result.Torrents), "Torrents OK")
+        assert.Equal(t, "89599BF4DC369A3A8ECA26411C5CCF922D78B486", result.Torrents[0].Hash, "Torrent hash OK")
     }
 }
 
@@ -37,17 +29,9 @@ func TestTopTwoCategories(t *testing.T) {
     ts := GetTestServer(`{"results":2,"torrents":[{"torrent_hash":"89599BF4DC369A3A8ECA26411C5CCF922D78B486"},{"torrent_hash":"BE4AA07856542F2DCD4E12362EF9F0A1AC88C358"}]}`)
     defer ts.Close()
     api[version]["Top"] = strings.Join([]string{ts.URL, "?category=%s&subcategory=%s"}, "")
-    testMap, err := Top("Movies", "Asian")
+    result, err := Top("Movies", "Asian")
     if assert.Nil(t, err) {
-    	statusCode, ok := testMap["results"]
-    	if assert.Equal(t, true, ok) {
-    		var results float64 = 2
-    		assert.Equal(t, results, statusCode, "Status code OK")
-    	}
-    	torrents, ok := testMap["torrents"]
-    	if assert.Equal(t, true, ok) {
-    		assert.Equal(t, 2, len(torrents.([]interface{})), "Torrents OK")
-    		assert.Equal(t, "89599BF4DC369A3A8ECA26411C5CCF922D78B486", torrents.([]interface{})[0].(map[string]interface{})["torrent_hash"], "Torrent hash OK")
-    	}
+    	assert.Equal(t, 2, len(result.Torrents), "Torrents OK")
+    	assert.Equal(t, "89599BF4DC369A3A8ECA26411C5CCF922D78B486", result.Torrents[0].Hash, "Torrent hash OK")
     }
 }

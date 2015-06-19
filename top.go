@@ -2,6 +2,7 @@ package strike
 
 import (
 	"fmt"
+	"errors"
 )
 
 /*
@@ -10,6 +11,9 @@ category string
 subcategory string - optional
 */
 func Top(params ...string) (results Results, err error) {
+	if (len(params) == 0) {
+		return results, errors.New("expecting at least one parameter")
+	}
 	last := len(params) - 1
 	args := make([]interface{}, 2)
   	for i := range args {
@@ -21,6 +25,5 @@ func Top(params ...string) (results Results, err error) {
   	}
   	query := fmt.Sprintf(api[version]["Top"], args...)
 	err = callAPI(query, &results)
-    fmt.Println(results.Torrents[0])
     return results, err
 }
