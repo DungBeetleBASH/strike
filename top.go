@@ -6,7 +6,7 @@ import (
 )
 
 /*
-Top returns the top 100 torrents in a given category and (optional) subcategory.
+Top returns a TorrentResults object containing the top 100 torrents in a given category and (optional) subcategory.
 category string
 subcategory string - optional
 */

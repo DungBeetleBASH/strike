@@ -5,7 +5,7 @@ import (
 )
 
 /*
-Search returns collection of torrents and can be passed 1-3 parameters.
+Search returns a TorrentResults object and can be passed 1-3 parameters.
 query string
 category string - optional
 subcategory string - optional

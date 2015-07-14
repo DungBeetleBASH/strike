@@ -7,7 +7,7 @@ import (
 )
 
 /*
-Info returns a map containing torrent information
+Info returns a TorrentResults object
 */
 func Info(params ...interface{}) (results TorrentResults, err error) {
 	var args []string
