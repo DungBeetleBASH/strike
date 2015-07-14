@@ -5,7 +5,7 @@ import (
 )
 
 /*
-Download returns a map containing a .torrent file url. 
+Download returns a TorrentDownload containing a .torrent file url. 
 */
 func Download(hash string) (result TorrentDownload, err error) {
 	query := fmt.Sprintf(api[version]["Download"], hash)
