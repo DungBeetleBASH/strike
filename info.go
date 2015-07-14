@@ -9,7 +9,7 @@ import (
 /*
 Info returns a map containing torrent information
 */
-func Info(params ...interface{}) (results Results, err error) {
+func Info(params ...interface{}) (results TorrentResults, err error) {
 	var args []string
 	l := len(params)
 	switch l {

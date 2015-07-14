@@ -10,7 +10,7 @@ Top returns the top 100 torrents in a given category and (optional) subcategory.
 category string
 subcategory string - optional
 */
-func Top(params ...string) (results Results, err error) {
+func Top(params ...string) (results TorrentResults, err error) {
 	if (len(params) == 0) {
 		return results, errors.New("expecting at least one parameter")
 	}

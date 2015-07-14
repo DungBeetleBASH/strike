@@ -38,9 +38,9 @@ func (t Torrent) GetDownload(string) (TorrentDownload, error) {
 }
 
 /*
-getInfo returns an Results object containing torrent info
+getInfo returns an TorrentResults object containing torrent info
 */
-func (t Torrent) GetInfo(string) (Results, error) {
+func (t Torrent) GetInfo(string) (TorrentResults, error) {
 	return Info(t.Hash)
 }
 
@@ -65,9 +65,9 @@ func (t Torrent) GetDescription(params ...bool) (result TorrentDescription, err 
 }
 
 /*
-Results contains information about an API response and holds an array of Torrent objects
+TorrentResults contains information about an API response and holds an array of Torrent objects
 */
-type Results struct {
+type TorrentResults struct {
 	Results				uint64		`json:"results"`
 	StatusCode			uint16		`json:"statuscode"`
 	ResponseTime		float32		`json:"responsetime"`

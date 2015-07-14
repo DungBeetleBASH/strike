@@ -13,7 +13,7 @@ These are documented below.
 
 ##API
 
-**func Search(params ...string) (results Results, err error)**
+**func Search(params ...string) (results TorrentResults, err error)**
 
     Accepts 1-3 parameters of type string
 
@@ -28,7 +28,7 @@ These are documented below.
     params[0] string - info hash
     params[1] bool - optional - if true the results will be returned base64 decoded
 
-**func Info(params ...interface{}) (results Results, err error)**
+**func Info(params ...interface{}) (results TorrentResults, err error)**
 
     Accepts either one []string parameter or any number of string parameters
 
@@ -50,7 +50,7 @@ These are documented below.
 
     Returns the current total torrent count on https://getstrike.net/
 
-**func Top(params ...string) (results Results, err error)**
+**func Top(params ...string) (results TorrentResults, err error)**
 
     Accepts 1-2 parameters of type string
 
