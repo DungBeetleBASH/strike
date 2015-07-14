@@ -27,32 +27,32 @@ type Torrent struct {
 	FileInfo			FileInfo	`json:"file_info"`
 	Page				string		`json:"page"`
 	RssFeed				string		`json:"rss_feed"`
-	MagnetUri			string		`json:"magnet_uri"`
+	MagnetURI			string		`json:"magnet_uri"`
 }
 
 /*
-getDownload returns a TorrentDownload
+GetDownload returns a TorrentDownload
 */
 func (t Torrent) GetDownload(string) (TorrentDownload, error) {
 	return Download(t.Hash)
 }
 
 /*
-getInfo returns an TorrentResults object containing torrent info
+GetInfo returns an TorrentResults object containing torrent info
 */
 func (t Torrent) GetInfo(string) (TorrentResults, error) {
 	return Info(t.Hash)
 }
 
 /*
-getIMDb returns an IMDb movie information object.
+GetIMDb returns an IMDb movie information object.
 */
 func (t Torrent) GetIMDb(string) (IMDb, error) {
 	return Imdb(t.ImdbID)
 }
 
 /*
-getDescription returns a TorrentDescription containing a base64 encoded HTML description, 
+GetDescription returns a TorrentDescription containing a base64 encoded HTML description, 
 or a TorrentDescription containing a plain text description if true is passed as the 
 first parameter. 
 */
@@ -95,7 +95,7 @@ TorrentDownload contains a Uri from a download API response
 */
 type TorrentDownload struct {
 	StatusCode			uint16		`json:"statuscode"`
-	Uri					string		`json:"message"`
+	URI					string		`json:"message"`
 }
 
 /*
