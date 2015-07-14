@@ -33,21 +33,21 @@ type Torrent struct {
 /*
 GetDownload returns a TorrentDownload
 */
-func (t Torrent) GetDownload(string) (TorrentDownload, error) {
+func (t Torrent) GetDownload() (TorrentDownload, error) {
 	return Download(t.Hash)
 }
 
 /*
-GetInfo returns an TorrentResults object containing torrent info
+GetInfo returns a TorrentResults object containing torrent info
 */
-func (t Torrent) GetInfo(string) (TorrentResults, error) {
+func (t Torrent) GetInfo() (TorrentResults, error) {
 	return Info(t.Hash)
 }
 
 /*
 GetIMDb returns an IMDb movie information object.
 */
-func (t Torrent) GetIMDb(string) (IMDb, error) {
+func (t Torrent) GetIMDb() (IMDb, error) {
 	return Imdb(t.ImdbID)
 }
 
