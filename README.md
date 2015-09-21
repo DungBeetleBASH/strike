@@ -10,7 +10,7 @@ These are documented below.
 
 ##Please Note
 
-    The API is in the early stages of development and is likely to change.
+The API is in the early stages of development and is likely to change.
 
 ##Installation
 
