@@ -12,6 +12,10 @@ These are documented below.
 
     The API is in the early stages of development and is likely to change.
 
+##Installation
+
+    $ go get github.com/DungBeetleBASH/strike
+
 ##API
 
 **func Search(params ...string) (results TorrentResults, err error)**
