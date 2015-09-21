@@ -5,7 +5,8 @@ strike is a Go wrapper for the getstrike.net torrent search API: (https://getstr
 Variadic functions have been used for some API calls to make the interface more flexible.
 These are documented below.
 
-[![Build Status](https://travis-ci.org/Pappa/strike.png)](https://travis-ci.org/Pappa/strike) [![GoDoc](https://godoc.org/github.com/DungBeetleBASH/strike?status.svg)](https://godoc.org/github.com/DungBeetleBASH/strike)
+[![Build Status](https://travis-ci.org/DungBeetleBASH/strike.png)](https://travis-ci.org/DungBeetleBASH/strike)
+[![GoDoc](https://godoc.org/github.com/DungBeetleBASH/strike?status.svg)](https://godoc.org/github.com/DungBeetleBASH/strike)
 
 ##Please Note
 
@@ -59,7 +60,7 @@ These are documented below.
 
 **func SetVersion(v string) bool**
 
-    Sets the getstrike.net API version to be used. 
+    Sets the getstrike.net API version to be used.
     Currently only accepts "v2" (which is also the default value)
 
 #License
