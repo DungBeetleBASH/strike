@@ -67,7 +67,7 @@ These are documented below.
 
 The MIT License (MIT)
 
-Copyright (c) 2015 CockchaferBASH
+Copyright (c) 2015 DungBeetleBASH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
