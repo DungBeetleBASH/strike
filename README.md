@@ -1,3 +1,7 @@
+#No longer functional
+
+Unfortunately, the JSON API that this library relies on for data is no longer available.
+
 #strike
 
 strike is a Go wrapper for the getstrike.net torrent search API: (https://getstrike.net/api/)
